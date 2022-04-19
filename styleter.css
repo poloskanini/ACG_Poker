@@ -51,6 +51,18 @@ body {
   border-radius: 20px;
 }
 
+.box-4 .box-front {
+  background-image: url(images/front-face6-01.png);
+}
+
+.box-2 .box-front {
+  background-image: url(images/front-face5-01.png);
+}
+
+.box-3 .box-front {
+  background-image: url(images/front-face7-01.png);
+}
+
 .box-front {
   color: #111111;
   background-image: url(images/front-face3.jpg);
