@@ -23,7 +23,7 @@ body {
   min-width: 380px;
   min-height: 600px;
   perspective: 1000px;
-  margin: 2rem;
+  margin: 4rem 2rem;
   border-radius: 20px;
   cursor: pointer;
 }
@@ -162,6 +162,6 @@ body {
     flex-direction: column;
   }
   .box {
-    margin: 2rem 0;
+    margin: 4rem 0;
   }
 }
