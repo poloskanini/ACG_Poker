@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(images/tapis-poker.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.box {
+  min-width: 380px;
+  min-height: 600px;
+  perspective: 1000px;
+  margin: 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+/* .box:hover .box-inner {
+  transform: rotateY(180deg);
+} */
+
+.box-front,
+.box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+}
+
+.box-front {
+  color: #111111;
+  background-image: url(images/front-face3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 100%;
+}
+
+.box-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: fit-content;
+  padding: 3rem;
+  background-image: url(images/BACKFACE_Plan\ de\ travail\ 1.png);
+  background-color: white;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000;
+  transform: rotateY(180deg);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
+              0 2px 2px rgba(0,0,0,0.15), 
+              0 3px 3px rgba(0,0,0,0.15), 
+              0 4px 4px rgba(0,0,0,0.15);
+}
+
+
+.box:active .box-inner {
+  transform: scale(.97);
+  transition: transform .2s;
+}
+
+.box.flip .box-inner {
+  transform: rotateY(540deg);
+}
+
+.box.fade-out .box-inner {
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  .box-container {
+    flex-direction: column;
+  }
+  .box {
+    margin: 2rem 0;
+  }
+}
