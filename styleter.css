@@ -68,7 +68,8 @@ body {
   background-image: url(images/front-face3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 600px;
+  min-height: 600px;
+  max-height: 800px;
   width: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
