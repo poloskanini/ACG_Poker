@@ -70,6 +70,8 @@ body {
   background-repeat: no-repeat;
   height: 600px;
   width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .box-back {
@@ -89,6 +91,8 @@ body {
               0 2px 2px rgba(0,0,0,0.15), 
               0 3px 3px rgba(0,0,0,0.15), 
               0 4px 4px rgba(0,0,0,0.15);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 
