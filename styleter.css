@@ -81,7 +81,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: fit-content;
-  padding: 4rem;
+  padding: 3rem;
   background-image: url(images/BACKFACE.png);
   background-color: white;
   background-size: contain;
