@@ -26,6 +26,7 @@ body {
   margin: 4rem 2rem;
   border-radius: 20px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .box-inner {
@@ -80,8 +81,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: fit-content;
-  padding: 3rem;
-  background-image: url(images/BACKFACE_Plan\ de\ travail\ 1.png);
+  padding: 4rem;
+  background-image: url(images/BACKFACE.png);
   background-color: white;
   background-size: contain;
   background-position: center;
@@ -95,7 +96,6 @@ body {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-
 
 .box:active .box-inner {
   transform: scale(.97);
