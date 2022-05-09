@@ -6,10 +6,131 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Casino';
+  src: url("fonts/Casino.ttf");
+}
+
+@font-face {
+  font-family: 'GillSans';
+  src: url(fonts/Gill\ Sans.otf);
+}
+
+@font-face {
+  font-family: 'GillSansBold';
+  src: url(fonts/Gill\ Sans\ Bold.otf);
+}
+
 body {
   background-image: url(images/tapis-poker.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  font-family: 'Casino', sans-serif;
+}
+
+.nav {
+  position: absolute;
+  left: 0;
+  top: 3rem;
+  color: #FFF;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  transition: all .1s ease-in-out;
+  text-decoration: none;
+}
+
+.nav p {
+  padding-left: .5rem;
+}
+
+.nav:hover {
+  color: #0593f8;
+}
+
+header .header-title {
+  margin: 3rem 0 0;
+  text-align: center;
+  font-size: clamp(3rem, 7vw, 7rem);
+  color: #FFF;
+  animation: blink 1.5s infinite alternate;
+}
+
+/* @keyframes blink {
+  0%, 10%, 25%, 27%, 53%, 54%, 75%, 100% {
+    text-shadow: 
+    .1vw 0vw .25vw #38c002,
+    .1vw 0vw .25vw #38c002,
+    .1vw 0vw .1vw #2b8707,
+    .15vw 0vw .1vw #2b8707,
+    .2vw 0vw .1vw #2b8707,
+    .1vw 0vw 2vw #206404,
+    .15vw 0vw 2vw #206404,
+    .1vw 0vw 2vw #206404,
+    .1vw 0vw 1vw #154302,
+    .15vw 0vw 1vw #154302
+  }
+  24%, 34%, 52%, 70% {
+    text-shadow:
+    .0vw 0vw .5vw #38c002,
+    .0vw 0vw .5vw #38c002,
+    .0vw 0vw .2vw #2b8707,
+    .05vw 0vw .1vw #2b8707,
+    .0vw 0vw .1vw #2b8707,
+    .0vw 0vw 1vw #206404,
+    .05vw 0vw 2vw #206404,
+    .0vw 0vw 1vw #206404,
+    .0vw 0vw 1vw #154302,
+    .05vw 0vw 0vw #154302
+  }
+  30%, 85% {
+    text-shadow: none;
+  }
+}
+
+@keyframes blink {
+  0%, 10%, 25%, 27%, 53%, 54%, 75%, 100% {
+    text-shadow: 
+    .1vw 0vw .25vw #f84205,
+    .1vw 0vw .25vw #f84205,
+    .1vw 0vw .1vw #f84205,
+    .15vw 0vw .1vw #b93205,
+    .2vw 0vw .1vw #b93205,
+    .1vw 0vw 1vw #b93205,
+    .15vw 0vw 2vw #892402,
+    .1vw 0vw 1vw #892402,
+    .1vw 0vw 1vw #892402,
+    .15vw 0vw 1vw #892402
+  }
+  24%, 34%, 52%, 70% {
+    text-shadow:
+    .0vw 0vw .5vw #f84205,
+    .0vw 0vw .5vw #f84205,
+    .0vw 0vw .2vw #f84205,
+    .05vw 0vw .1vw #b93205,
+    .0vw 0vw .1vw #b93205,
+    .0vw 0vw 1vw #b93205,
+    .05vw 0vw 2vw #892402,
+    .0vw 0vw 1vw #892402,
+    .0vw 0vw 1vw #892402,
+    .05vw 0vw 0vw #892402
+  }
+  30%, 85% {
+    text-shadow: none;
+  }
+} */
+
+header img {
+  width: clamp(100px, 9vw, 10rem);
+  z-index: 1;
 }
 
 .box-container {
@@ -23,10 +144,11 @@ body {
   min-width: 380px;
   min-height: 600px;
   perspective: 1000px;
-  margin: 6rem 2rem;
+  margin: 4rem 2rem;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
+  font-family: 'GillSans';
 }
 
 .box-inner {
@@ -82,7 +204,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: fit-content;
-  padding: 3rem;
+  padding: 2rem;
   background-image: url(images/BACKFACE.png);
   background-color: white;
   background-size: contain;
@@ -96,6 +218,10 @@ body {
               0 4px 4px rgba(0,0,0,0.15);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+.box-back h2 {
+  font-family: 'GillSansBold';
 }
 
 .box:active .box-inner {
@@ -160,9 +286,14 @@ body {
 /* MEDIA QUERIES */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
+  body {
+    background-position: center;
+  }
+
   .box-container {
     flex-direction: column;
   }
+
   .box {
     margin: 6rem 0;
   }
