@@ -25,6 +25,7 @@ body {
   background-image: url(images/tapis-poker.jpg);
   background-size: cover;
   min-height: 100vh;
+  height: 100vh;
 }
 
 header {
@@ -32,8 +33,11 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 1.5rem 0 0;
   font-family: 'Casino', sans-serif;
+}
+
+header a {
+  margin: 1.5rem 0 0;
 }
 
 nav a {
@@ -158,8 +162,7 @@ header img {
 
 .cards-deck {
   margin: auto;
-  margin-bottom: 1rem;
-  width: clamp(20rem, 65vw, 50rem);
+  width: clamp(20rem, 60vw, 40rem);
 }
 
 .play-wrapper {
@@ -168,7 +171,7 @@ header img {
   text-align: center;
 }
 
-.play-button {
+/* .play-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,7 +198,7 @@ header img {
 
 .play-button:hover {
   border: 5px solid #0593f8;
-}
+} */
 
 .button-container {
   display: flex;
