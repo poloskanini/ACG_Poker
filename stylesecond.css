@@ -29,6 +29,7 @@ body {
   background-image: url(images/tapis-poker2.jpg);
   background-size: cover;
   min-height: 100vh;
+  height: 100vh;
 }
 
 header {
