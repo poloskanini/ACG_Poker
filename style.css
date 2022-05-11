@@ -7,7 +7,7 @@
 }
 
 :root {
-  --clr-neon: rgba(248, 7, 7, .8);
+  --clr-neon: rgba(248, 7, 7, .6);
 }
 
 @font-face {
@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  background-image: url(images/tapis-poker.jpg);
+  background-image: url(images/tapis-poker2.jpg);
   background-size: cover;
   min-height: 100vh;
   height: 100vh;

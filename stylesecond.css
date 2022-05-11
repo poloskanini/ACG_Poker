@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  background-image: url(images/tapis-poker.jpg);
+  background-image: url(images/tapis-poker2.jpg);
   background-size: cover;
   min-height: 100vh;
 }
@@ -110,12 +110,17 @@ header img {
   text-transform: uppercase;
 }
 
-.cards-deck:hover {
-  filter: drop-shadow(0 0 1rem #41aaf5);
+.cards-deck1:hover {
+  filter: drop-shadow(0 0 2rem #41aaf5);
 }
 
-.cards-deck:hover p {
+.cards-deck1:hover p {
   filter: drop-shadow(0 0 .3rem #f54150);
+}
+
+.cards-deck:not(.cards-deck1) {
+  filter: brightness(50%);
+  cursor: not-allowed;
 }
 
 /* MEDIA QUERIES */
